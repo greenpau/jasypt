@@ -4,7 +4,8 @@ SCRIPT_NAME=decrypt.sh
 EXECUTABLE_CLASS=org.jasypt.intf.cli.JasyptPBEStringDecryptionCLI
 BIN_DIR=`dirname $0`
 DIST_DIR=$BIN_DIR/..
-LIB_DIR=$DIST_DIR/lib
+#LIB_DIR=$DIST_DIR/lib
+LIB_DIR=`realpath "$BIN_DIR/../../../../jasypt/target"`
 EXEC_CLASSPATH="."
 
 if [ -n "$JASYPT_CLASSPATH" ]
